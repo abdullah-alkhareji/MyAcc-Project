@@ -3,8 +3,8 @@
 test text
 
 - [x] #739
-- [ ] :+1
-- [ ] :+2
+- [ ] :+1:
+- [ ] :+2:
 
 - list item
 - list item
