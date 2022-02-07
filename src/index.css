@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+hr {
+  background-color: #a0a0a0;
+}
+
+.__app {
+  height: 100vh;
+  overflow: hidden;
+  background: #fafafa;
+  background-image: linear-gradient(to right bottom, #dadada, #fff);
+}
+
+.app__sidebar {
+  background: #fff;
+  border: solid 1px #e0e0e0;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.app__sidebar--logo {
+  background: #f0f0f0;
+  width: 100%;
+  padding: 20px;
+  border-bottom: solid 1px #e0e0e0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__sidebar--body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* padding: 1rem; */
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__menu--list {
+  border-bottom: solid 1px #e0e0e0;
+  padding: 0 0 1rem;
+}
+
+.sidebar__menu--list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  padding: 1rem 1rem 0;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.sidebar__menu--list-icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar__menu--list-header.open {
+}
+
+.sidebar__menu--list-header.open > .sidebar__menu--list-icon {
+  transform: rotate(180deg);
+}
+
+.sidebar__menu--list-body {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__menu--list-link {
+  color: #a0a0a0;
+  text-transform: capitalize;
+}
+
+.sidebar__menu--list-link.active {
+  font-weight: bold;
+  color: #333;
+}
