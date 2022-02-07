@@ -4,7 +4,7 @@ test text
 
 - [x] #739
 - [ ] :+1:
-- [ ] :+2:
+- [ ] :-2:
 
 - list item
 - list item
