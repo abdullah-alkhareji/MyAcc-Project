@@ -2,6 +2,10 @@
 
 test text
 
-- [x] list item
+- [x] #739
 - [ ] list item
 - [ ] list item
+
+- list item
+- list item
+- list item
