@@ -2,6 +2,6 @@
 
 test text
 
-- list item
-- list item
-- list item
+- [x] list item
+- [ ] list item
+- [ ] list item
