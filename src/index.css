@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  min-height: 100vh;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -17,15 +26,20 @@ a {
   color: unset;
 }
 
+a:hover {
+  color: unset;
+}
+
 hr {
   background-color: #a0a0a0;
 }
 
 .app {
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-image: linear-gradient(to right bottom, #dadada, #fff);
-  /* background-image: url("https://jooinn.com/images/abstract-background-284.jpg"); */
 }
 
 .app__sidebar {
@@ -108,13 +122,20 @@ hr {
 }
 
 .sidebar__menu--list-link {
-  color: #eee;
+  color: #e0e0e0;
   text-transform: capitalize;
   /* letter-spacing: 2px; */
 }
 
 .sidebar__menu--list-link.active {
-  /* font-weight: bold; */
+  font-weight: 500;
+  color: #fff;
+  text-decoration: underline 2px dashed #0d6efd;
+}
+
+.sidebar__menu--list-link:hover,
+.sidebar__menu--list-link.active:hover {
+  text-decoration: underline 2px dashed #0d6efd;
   color: #fff;
 }
 

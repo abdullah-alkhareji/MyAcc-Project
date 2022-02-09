@@ -7,19 +7,17 @@ import Tasks from "./pages/Tasks";
 
 function App() {
   return (
-    <div className="container-fluid app">
-      <div className="row">
-        <div className="col-lg-3 col-md-12 p-3">
-          <SideBar />
-        </div>
-        <div className="col-lg-9 col-md-12 p-3">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/tasks" element={<Tasks />} />
-            <Route path="/calendar" element={<Calendar />} />
-          </Routes>
-        </div>
+    <div className="container-fluid app  row m-0">
+      <div className="col-lg-3 col-md-12 p-3">
+        <SideBar />
+      </div>
+      <div className="col-lg-9 col-md-12 p-3">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/calendar" element={<Calendar />} />
+        </Routes>
       </div>
     </div>
   );
