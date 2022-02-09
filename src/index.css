@@ -21,16 +21,18 @@ hr {
   background-color: #a0a0a0;
 }
 
-.__app {
+.app {
   height: 100vh;
   overflow: hidden;
-  background: #fafafa;
   background-image: linear-gradient(to right bottom, #dadada, #fff);
+  /* background-image: url("https://jooinn.com/images/abstract-background-284.jpg"); */
 }
 
 .app__sidebar {
-  background: #fff;
-  border: solid 1px #e0e0e0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border: solid 1px #aaa;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -39,14 +41,18 @@ hr {
 }
 
 .app__sidebar--logo {
-  background: #f0f0f0;
   width: 100%;
   padding: 20px;
-  border-bottom: solid 1px #e0e0e0;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  color: #fff;
+}
+
+.app__sidebar--logo .icon {
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .app__sidebar--body {
@@ -63,18 +69,24 @@ hr {
 }
 
 .sidebar__menu--list {
-  border-bottom: solid 1px #e0e0e0;
-  padding: 0 0 1rem;
+  /* border-bottom: solid 1px #e0e0e0; */
+  /* padding: 0 0 1rem; */
+  margin-bottom: 1rem;
 }
 
 .sidebar__menu--list-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: max-content;
   color: #666;
-  padding: 1rem 1rem 0;
+  padding: 0rem 1rem;
   text-transform: capitalize;
   cursor: pointer;
+}
+
+.sidebar__menu--list-header h6 {
+  margin: 0;
 }
 
 .sidebar__menu--list-icon {
@@ -90,17 +102,24 @@ hr {
 }
 
 .sidebar__menu--list-body {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
 }
 
 .sidebar__menu--list-link {
-  color: #a0a0a0;
+  color: #eee;
   text-transform: capitalize;
+  /* letter-spacing: 2px; */
 }
 
 .sidebar__menu--list-link.active {
-  font-weight: bold;
-  color: #333;
+  /* font-weight: bold; */
+  color: #fff;
+}
+
+@media screen and (width<576px) {
+  .app__sidebar {
+    height: max-content;
+  }
 }

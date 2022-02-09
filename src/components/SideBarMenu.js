@@ -20,6 +20,33 @@ const menuList = [
   },
 ];
 
+const menuItems = [
+  {
+    id: 1,
+    title: "Home",
+    path: "/",
+    menuList: 1,
+  },
+  {
+    id: 2,
+    title: "Profile",
+    path: "/profile",
+    menuList: 2,
+  },
+  {
+    id: 3,
+    title: "Tasks",
+    path: "/tasks",
+    menuList: 3,
+  },
+  {
+    id: 4,
+    title: "calendar",
+    path: "/calendar",
+    menuList: 3,
+  },
+];
+
 const SideBarMenu = () => {
   //   const [isOpen, setIsOpen] = useState(false);
   const [lists, setLists] = useState(menuList);
@@ -41,16 +68,20 @@ const SideBarMenu = () => {
             <h6>{list.title}</h6>
             <BiChevronDown className="sidebar__menu--list-icon" />
           </div>
-          {list.isOpen && (
-            <div className="sidebar__menu--list-body">
-              <NavLink to="/" className="sidebar__menu--list-link">
-                home
-              </NavLink>
-              <NavLink to="/profile" className="sidebar__menu--list-link">
-                profile
-              </NavLink>
-            </div>
-          )}
+          {list.isOpen &&
+            menuItems.map(
+              (item) =>
+                item.menuList === list.id && (
+                  <div key={item.id} className="sidebar__menu--list-body">
+                    <NavLink
+                      to={item.path}
+                      className="sidebar__menu--list-link"
+                    >
+                      {item.title}
+                    </NavLink>
+                  </div>
+                )
+            )}
         </div>
       ))}
     </div>
